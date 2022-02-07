@@ -24,7 +24,7 @@ import lombok.Getter;
 import lombok.Setter;
 
 
-@ControllerAdvice //Controle que ohserva toda a aplicacao
+@ControllerAdvice 
 public class AlgamoneyExceptionHandler extends ResponseEntityExceptionHandler{
 	
 	@Autowired
