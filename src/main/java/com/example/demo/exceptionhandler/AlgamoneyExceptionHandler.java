@@ -70,5 +70,4 @@ public class AlgamoneyExceptionHandler extends ResponseEntityExceptionHandler{
 		private String mensagemUsuario;
 		private String mensagemDesenvolvedor;
 	}
-
 }
