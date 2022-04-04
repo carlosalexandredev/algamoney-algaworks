@@ -39,14 +39,14 @@ public class PessoaResource {
 	private ApplicationEventPublisher publisher;
 	
 	@GetMapping
-	public ResponseEntity<?> listar(){
+	public ResponseEntity<List<Pessoa>> listar(){
 		List<Pessoa> pessoas = pessoaRepository.findAll();
 		return !pessoas.isEmpty() ?  ResponseEntity.ok(pessoas) : ResponseEntity.noContent().build();
 	}
 	 
 	//TODO: Method don't return the handler "Recurso nao encontrado" when inserting a value whit don't exists in the DataBase.
 	@GetMapping("/{codigo}")
-	public ResponseEntity<?> buscarPelaPessoa(@PathVariable Long codigo) {
+	public ResponseEntity<Optional<Pessoa>> buscarPelaPessoa(@PathVariable Long codigo) {
 		Optional<Pessoa> pessoa = pessoaRepository.findById(codigo);
 		return !pessoa.isEmpty() ? ResponseEntity.ok(pessoa) : ResponseEntity.notFound().build();
 	}
