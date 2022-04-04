@@ -31,6 +31,7 @@ public class CategoriaResource {
 	@Autowired
 	private ApplicationEventPublisher publisher;
 	
+	//TODO: Method don't return the handler "Recurso nao encontrado" when inserting a value whit don't exists in the DataBase.
 	@GetMapping
 	public List<Categoria> listar(){
 		return categoriaRepository.findAll();

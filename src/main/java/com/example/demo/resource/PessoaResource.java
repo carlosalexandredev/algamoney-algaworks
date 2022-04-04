@@ -39,7 +39,7 @@ public class PessoaResource {
 	private ApplicationEventPublisher publisher;
 	
 	@GetMapping
-	public ResponseEntity<List<Pessoa>> listar(){
+	public ResponseEntity<?> listar(){
 		List<Pessoa> pessoas = pessoaRepository.findAll();
 		return !pessoas.isEmpty() ?  ResponseEntity.ok(pessoas) : ResponseEntity.noContent().build();
 	}
