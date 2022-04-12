@@ -42,6 +42,11 @@
 		    <groupId>org.hibernate</groupId>
 		    <artifactId>hibernate-java8</artifactId>
 		</dependency>
+		<!-- Hibernate JPA MetaModel -->
+		<dependency>
+			<groupId>org.hibernate</groupId>
+			<artifactId>hibernate-jpamodelgen</artifactId>
+		</dependency>
 		<!--	Java 8 Date/time	-->
 		<dependency>
 		    <groupId>com.fasterxml.jackson.datatype</groupId>
@@ -50,7 +55,7 @@
 		<dependency>
 			<groupId>org.apache.commons</groupId>
 			<artifactId>commons-lang3</artifactId>
-			<version>3.4</version>
+			<version>3.4</version><!--$NO-MVN-MAN-VER$-->
 		</dependency>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>

@@ -20,10 +20,10 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.example.demo.Service.PessoaService;
 import com.example.demo.event.RecursoCriadoEvent;
 import com.example.demo.model.Pessoa;
 import com.example.demo.repository.PessoaRepository;
+import com.example.demo.service.PessoaService;
 
 @RestController
 @RequestMapping("/pessoas")

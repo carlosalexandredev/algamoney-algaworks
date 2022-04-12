@@ -19,7 +19,7 @@ import lombok.Setter;
 @Table(name = "categoria")
 public class Categoria {
 	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY) //Gerado apartir da tebela
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long codigo;
 	
 	@NotNull
