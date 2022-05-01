@@ -30,22 +30,9 @@ public class AuthorizationServerConfig extends AuthorizationServerConfigurerAdap
 		clients.inMemory()
 			.withClient("angular")
 			.secret(passwordEncoder.encode("@ngul@r0"))
-//			.secret("@ngul@r0")
 			.scopes("read", "write")
 			.authorizedGrantTypes("password")
 			.accessTokenValiditySeconds(1800);
-		
-		BCryptPasswordEncoder passwordEncoder = new BCryptPasswordEncoder();
-		String password = "@ngul@r0";
-		String encodedPassword = passwordEncoder.encode(password);
-
-		System.out.println();
-		System.out.println("Password is         : " + password);
-		System.err.println("Encoded Password is : " + encodedPassword);
-		System.out.println();
-		boolean isPasswordMatch = passwordEncoder.matches(password, encodedPassword);
-		System.out.println("Password : " + password + "   isPasswordMatch    : " + isPasswordMatch);
-		
 	}
 	
 	
